@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body {
+            background-color: #8EACCD;
+
+        }
+
+        .container {
+            width: 350px;
+            height: 500px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 20px;
+        }
+
+        h1 {
+            position: absolute;
+            left: 50%;
+            top: -80px;
+            width: 300px;
+            transform: translateX(-50%);
+            background-color: #D7E5CA;
+            color: #000;
+            font-size: 30px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .wrapper {
+            padding-top: 40px;
+            padding-left: 50px;
+            padding-right: 40px;
+        }
+
+        input,
+        select {
+            width: 80%;
+            border: none;
+            border-bottom: 1px solid #0074d9;
+            padding: 10px;
+        }
+
+        input:focus,
+        select:focus {
+            border: 1px solid #0074d9;
+            outline: none;
+        }
+
+        select {
+            width: 88% !important;
+        }
+
+        button {
+            margin: 20px auto;
+            width: 150px;
+            height: 50px;
+            background-color: #F9F3CC;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-left: 18%;
+        }
+
+        .totalea {
+            text-align: center;
+            font-size: 18px;
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>TIP CALCULATOR</h1>
+		<div class="wrapper">
+
+			<p>Bill Amount</p>
+			<input type="text" id="amount" placeholder="Amount to be paid in pesos">
+			<p>Tip:</p>
+			<select id="services">
+				<option selected disabled hidden>
+					Select
+				</option>
+				<option value="0.25">25% </option>
+				<option value="0.20">20%</option>
+				<option value="0.15">15%</option>
+				<option value="0.10">10%</option>
+				<option value="0.05">5%</option>
+			</select>
+			<p>Total number of persons</p>
+			<input type="text" id="persons" placeholder="Number of people sharing the bill">
+			<button id="calculate">Calculate</button>
+		</div>
+
+		<div class="totalea">
+			<p>Total Each</p>
+			<span id="total">0</span>    
+			<span id="each"></span>
+		</div>
+	</div>
+<script type="text/javascript" src="./tipcalculator.js"></script>
+</body>
+
+</html>
